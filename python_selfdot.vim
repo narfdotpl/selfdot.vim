@@ -1,12 +1,16 @@
+" don't load twice
 if exists('b:loaded_selfdot')
     finish
 endif
 let b:loaded_selfdot = 1
 
+" make line continuation work with `:set compatible`
+let s:save_cpo = &cpo
+set cpo&vim
+
 
 let s:PREFIXES = [' ', '\t', '(', '[', '{', '=', '>', '<', '+', '-', '*', '/',
                 \ '%', '&', '|', '~', ',', ':', "'", '"', '`', '@', ';', '#']
-
 
 function s:DotToSelfdot()
     let prev_char = getline('.')[col('.') - 2]
@@ -20,5 +24,8 @@ function s:DotToSelfdot()
     return '.'
 endfunction
 
-
 inoremap <buffer> <expr> . <SID>DotToSelfdot()
+
+
+" restore cpoptions (`:set compatible` stuff)
+let &cpo = s:save_cpo
