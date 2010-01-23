@@ -1,7 +1,7 @@
-selfdot
-=======
+selfdot.vim
+===========
 
-Vim Python filetype plugin for typing `self.` by pressing `.`
+Python filetype plugin for typing `self.` by pressing `.`
 
 Typing `self.` can be annoying, mistyping -- even more.  This plugin lets you
 save keystrokes by expanding `.` into `self.` in places where putting a dot
