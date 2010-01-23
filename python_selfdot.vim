@@ -1,6 +1,6 @@
 " Vim Python filetype plugin for typing `self.` by pressing `.`
 "
-" Version:  0.1.2+
+" Version:  0.1.3
 " Website:  http://github.com/narfdotpl/selfdot.vim
 " License:  public domain <http://unlicense.org/>
 " Author:   Maciej Konieczny <hello@narf.pl>

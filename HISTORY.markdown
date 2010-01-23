@@ -7,6 +7,12 @@ This file only covers changes important for the end-user.  Visit
   [gh]: http://github.com/narfdotpl/selfdot.vim/commits/master
 
 
+v0.1.3
+------
+
+ * made tab prefix actually work
+
+
 v0.1.2
 ------
 
