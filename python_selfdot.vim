@@ -20,8 +20,8 @@ set cpo&vim
 let s:PREFIXES = [' ', "\t", '(', '[', '{', '=', '>', '<', '+', '-', '*', '/',
                 \ '%', '&', '|', '~', ',', ';', ':', '@', '`', '#']
 
-if !exists('*s:DotToSelfdot')
-    function s:DotToSelfdot()
+if !exists('*s:DotOrSelfdot')
+    function s:DotOrSelfdot()
         let prev_char = getline('.')[col('.') - 2]
 
         for prefix in s:PREFIXES
@@ -34,7 +34,7 @@ if !exists('*s:DotToSelfdot')
     endfunction
 endif
 
-inoremap <buffer> <expr> . <SID>DotToSelfdot()
+inoremap <buffer> <expr> . <SID>DotOrSelfdot()
 
 
 " restore cpoptions (`:set compatible` stuff)
