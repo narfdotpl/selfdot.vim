@@ -1,6 +1,6 @@
 " Vim Python filetype plugin for typing `self.` by pressing `.`
 "
-" Version:     0.1.2
+" Version:     0.1.2+
 " Maintainer:  Maciej Konieczny <hello@narf.pl>
 " Homepage:    http://github.com/narfdotpl/selfdot.vim
 " License:     This file is placed in the public domain.
@@ -17,7 +17,7 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 
-let s:PREFIXES = [' ', '\t', '(', '[', '{', '=', '>', '<', '+', '-', '*', '/',
+let s:PREFIXES = [' ', "\t", '(', '[', '{', '=', '>', '<', '+', '-', '*', '/',
                 \ '%', '&', '|', '~', ',', ';', ':', '@', '`', '#']
 
 if !exists('*s:DotToSelfdot')
