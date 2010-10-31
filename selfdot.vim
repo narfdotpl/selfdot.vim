@@ -7,35 +7,42 @@
 
 
 " don't load twice
-if exists('b:loaded_selfdot')
+if exists('b:is_selfdot_loaded')
     finish
 endif
-let b:loaded_selfdot = 1
+let b:is_selfdot_loaded = 1
 
 " make line continuation work with `:set compatible`
-let s:save_cpo = &cpo
+let s:saved_cpo = &cpo
 set cpo&vim
 
-
-let s:PREFIXES = [' ', "\t", '(', '[', '{', '=', '>', '<', '+', '-', '*', '/',
-                \ '%', '&', '|', '~', ',', ';', ':', '@', '`', '#']
-
+" don't define twice
 if !exists('*s:DotOrSelfdot')
-    function s:DotOrSelfdot()
-        let prev_char = getline('.')[col('.') - 2]
+    " list valid `self.` prefixes
+    let s:prefixes = [' ', "\t", '(', '[', '{', '=', '>', '<', '+', '-', '*',
+                    \ '/', '%', '&', '|', '~', ',', ';', ':', '@', '`', '#']
 
-        for prefix in s:PREFIXES
+    " define magic
+    function s:DotOrSelfdot()
+        " get position
+        let x = col('.') - 1
+        let y = line('.')
+
+        " check if previous character is one of the prefixes
+        let prev_char = getline(y)[x - 1]
+        for prefix in s:prefixes
             if prev_char == prefix
                 return 'self.'
             endif
         endfor
 
+        " return dot if check failed
         return '.'
     endfunction
 endif
 
+" map magic to dot key
 inoremap <buffer> <expr> . <SID>DotOrSelfdot()
 
-
 " restore cpoptions (`:set compatible` stuff)
-let &cpo = s:save_cpo
+let &cpo = s:saved_cpo
