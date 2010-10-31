@@ -7,6 +7,10 @@ This file only covers changes important for the end-user.  Visit
   [gh]: http://github.com/narfdotpl/selfdot.vim/commits/master
 
 
+v0.2dev
+-------
+
+
 v0.1.3
 ------
 
