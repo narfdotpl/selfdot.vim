@@ -12,10 +12,9 @@ line or right after an operator.
 Installation
 ------------
 
-    mkdir -p ~/.vim/ftplugin
-    curl -s \
-      http://github.com/narfdotpl/selfdot.vim/raw/master/python_selfdot.vim \
-      > ~/.vim/ftplugin/python_selfdot.vim
+    mkdir -p ~/.vim/ftplugin/python
+    cd !$
+    curl -O http://github.com/narfdotpl/selfdot.vim/raw/master/selfdot.vim
 
 Be sure to have `:filetype plugin on`
 
