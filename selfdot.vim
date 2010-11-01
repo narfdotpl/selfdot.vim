@@ -23,7 +23,7 @@ set cpo&vim
 if !exists('*s:DotOrSelfdot')
     " list valid `self.` prefixes
     let s:prefixes = [' ', "\t", '(', '[', '{', '=', '>', '<', '+', '-', '*',
-                    \ '/', '%', '&', '|', '~', ',', ';', ':', '@', '`', '#']
+                    \ '/', '%', '&', '|', '~', ',', ';', ':', '@']
 
     " define magic
     function s:DotOrSelfdot()
