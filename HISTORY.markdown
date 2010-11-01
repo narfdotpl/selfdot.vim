@@ -12,6 +12,8 @@ for [full history][].
 
  - Disabled plugin in strings and comments.
 
+ - Added support for line continuation.
+
 
 [v0.1.3][]
 ----------

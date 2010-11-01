@@ -22,10 +22,15 @@ set cpo&vim
 " don't define twice
 if !exists('*s:DotOrSelfdot')
     " list valid `self.` prefixes
-    let s:prefixes = [' ', "\t", '(', '[', '{', '=', '>', '<', '+', '-', '*',
-                    \ '/', '%', '&', '|', '~', ',', ';', ':', '@']
+    let s:prefixes = ['(', '[', '{', '=', '>', '<', '+', '-', '*', '/', '%',
+                    \ '&', '|', '~', ',', ';', ':', '@']
 
-    " define magic
+    " strip trailing whitespace
+    function s:rstrip(string)
+        return substitute(a:string, '\s\+$', '', '')
+    endfunction
+
+    " return `.` or `self.` depending on context
     function s:DotOrSelfdot()
         " get position
         let x = col('.') - 1
@@ -38,8 +43,21 @@ if !exists('*s:DotOrSelfdot')
             return '.'
         endif
 
+        " get previous non-whitespace character
+        let prev_char = s:rstrip(getline(y)[:x - 1])[-1:]
+
+        " check if current line is continuation
+        if prev_char == ''
+            let prev_line = s:rstrip(getline(y - 1))
+            if prev_line[-1:] == '\'
+                " get previous non-whitespace character
+                let prev_char = s:rstrip(prev_line[:-2])[-1:]
+            else
+                return 'self.'
+            endif
+        endif
+
         " check if previous character is one of the prefixes
-        let prev_char = getline(y)[x - 1]
         for prefix in s:prefixes
             if prev_char == prefix
                 return 'self.'
