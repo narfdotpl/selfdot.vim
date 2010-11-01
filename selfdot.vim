@@ -23,7 +23,7 @@ set cpo&vim
 if !exists('*s:DotOrSelfdot')
     " list valid `self.` prefixes
     let s:prefixes = ['(', '[', '{', '=', '>', '<', '+', '-', '*', '/', '%',
-                    \ '&', '|', '~', ',', ';', ':', '@']
+                    \ '&', '|', '^', '~', ',', ';', ':', '@']
 
     " strip trailing whitespace
     function s:rstrip(string)

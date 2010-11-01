@@ -14,6 +14,8 @@ for [full history][].
 
  - Added support for line continuation.
 
+ - Added `^` prefix (XOR operator).
+
 
 [v0.1.3][]
 ----------
