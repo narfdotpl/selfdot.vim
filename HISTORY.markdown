@@ -10,6 +10,8 @@ for [full history][].
 [v0.2dev][]
 -----------
 
+ - Disabled plugin in strings and comments.
+
 
 [v0.1.3][]
 ----------

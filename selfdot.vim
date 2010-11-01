@@ -31,6 +31,13 @@ if !exists('*s:DotOrSelfdot')
         let x = col('.') - 1
         let y = line('.')
 
+        " don't work inside strings nor comments
+        let syntax_item_name = synIDattr(synID(y, x, 0), 'name')
+        if syntax_item_name[-6:] == 'String' ||
+         \ syntax_item_name[-7:] == 'Comment'
+            return '.'
+        endif
+
         " check if previous character is one of the prefixes
         let prev_char = getline(y)[x - 1]
         for prefix in s:prefixes
