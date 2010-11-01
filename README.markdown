@@ -1,12 +1,12 @@
 selfdot.vim
 ===========
 
-Python filetype plugin for typing `self.` by pressing `.`
+Vim plugin that lets you type `self.` by pressing `.` in Python files.
 
 Typing `self.` can be annoying, mistyping -- even more.  This plugin
 lets you save keystrokes by expanding `.` into `self.` in places where
-putting a dot is a syntax error, e.g. at the beginning of an indented
-line or right after an operator.
+putting a dot is a syntax error (e.g. at the beginning of an indented
+line or right after an operator).
 
 
 Installation
