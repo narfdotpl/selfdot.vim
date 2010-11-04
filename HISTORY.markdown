@@ -4,7 +4,7 @@ selfdot.vim history
 This file only covers changes important for the end-user.  Visit GitHub
 for [full history][].
 
-  [full history]: http://github.com/narfdotpl/selfdot.vim/commits/master
+  [full history]: https://github.com/narfdotpl/selfdot.vim/commits/master
 
 
 [v0.2dev][]
@@ -41,8 +41,8 @@ for [full history][].
  - Initial release.
 
 
-  [v0.2dev]: http://github.com/narfdotpl/selfdot.vim/compare/v0.1.3...master
-  [v0.1.3]: http://github.com/narfdotpl/selfdot.vim/compare/v0.1.2...v0.1.3
-  [v0.1.2]: http://github.com/narfdotpl/selfdot.vim/compare/v0.1.1...v0.1.2
-  [v0.1.1]: http://github.com/narfdotpl/selfdot.vim/compare/v0.1.0...v0.1.1
-  [v0.1]: http://github.com/narfdotpl/selfdot.vim/compare/ba14ca7...v0.1.0
+  [v0.2dev]: https://github.com/narfdotpl/selfdot.vim/compare/v0.1.3...master
+  [v0.1.3]: https://github.com/narfdotpl/selfdot.vim/compare/v0.1.2...v0.1.3
+  [v0.1.2]: https://github.com/narfdotpl/selfdot.vim/compare/v0.1.1...v0.1.2
+  [v0.1.1]: https://github.com/narfdotpl/selfdot.vim/compare/v0.1.0...v0.1.1
+  [v0.1]: https://github.com/narfdotpl/selfdot.vim/compare/ba14ca7...v0.1.0
