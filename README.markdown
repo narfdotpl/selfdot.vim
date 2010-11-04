@@ -35,10 +35,7 @@ Put `selfdot.vim` in `~/.vim/ftplugin/python` (be sure to have
 
 ### With [Pathogen][] and [Git][vimcast]
 
-    cd ~/.vim/bundle
-    git submodule add https://github.com/narfdotpl/selfdot.vim.git selfdot
-    git commit --all --message='installed selfdot.vim'
-
+You know what to do.
 
   [pathogen]: https://github.com/tpope/vim-pathogen
   [vimcast]: http://vimcasts.org/e/27
