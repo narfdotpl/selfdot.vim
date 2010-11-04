@@ -13,11 +13,35 @@ comments in order for you to be able to type `cd ..` and stay sane.
 Installation
 ------------
 
+### In a Nutshell
+
+Put `selfdot.vim` in `~/.vim/ftplugin/python` (be sure to have
+`:filetype plugin on`).
+
+
+### Without Fuss
+
     mkdir -p ~/.vim/ftplugin/python
     cd !$
-    curl -O http://github.com/narfdotpl/selfdot.vim/raw/master/ftplugin/python/selfdot.vim
+    curl -O https://github.com/narfdotpl/selfdot.vim/raw/master/ftplugin/python/selfdot.vim
 
-Be sure to have `:filetype plugin on`
+
+### With [Pathogen][]
+
+    mkdir -p ~/.vim/bundle/selfdot/ftplugin/python
+    cd !$
+    curl -O https://github.com/narfdotpl/selfdot.vim/raw/master/ftplugin/python/selfdot.vim
+
+
+### With [Pathogen][] and [Git][vimcast]
+
+    cd ~/.vim/bundle
+    git submodule add https://github.com/narfdotpl/selfdot.vim.git selfdot
+    git commit --all --message='installed selfdot.vim'
+
+
+  [pathogen]: https://github.com/tpope/vim-pathogen
+  [vimcast]: http://vimcasts.org/e/27
 
 
 Meta
