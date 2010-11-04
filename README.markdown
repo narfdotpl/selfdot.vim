@@ -15,7 +15,7 @@ Installation
 
     mkdir -p ~/.vim/ftplugin/python
     cd !$
-    curl -O http://github.com/narfdotpl/selfdot.vim/raw/master/selfdot.vim
+    curl -O http://github.com/narfdotpl/selfdot.vim/raw/master/ftplugin/python/selfdot.vim
 
 Be sure to have `:filetype plugin on`
 
