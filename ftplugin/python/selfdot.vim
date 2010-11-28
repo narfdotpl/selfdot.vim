@@ -37,9 +37,9 @@ if !exists('*s:DotOrSelfdot')
         let y = line('.')
 
         " don't work inside strings nor comments
-        let syntax_item_name = synIDattr(synID(y, x, 0), 'name')
-        if syntax_item_name[-6:] == 'String' ||
-         \ syntax_item_name[-7:] == 'Comment'
+        let syntax_item_name = synIDattr(synIDtrans(synID(y, x, 0)), 'name')
+        if syntax_item_name == 'String' ||
+         \ syntax_item_name == 'Comment'
             return '.'
         endif
 
