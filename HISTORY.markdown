@@ -10,6 +10,8 @@ for [full history][].
 [v0.2.1dev][]
 -------------
 
+ - Fixed bug: dot was not expanded after keywords.
+
 
 [v0.2][]
 --------
