@@ -7,8 +7,8 @@ for [full history][].
   [full history]: https://github.com/narfdotpl/selfdot.vim/commits/master
 
 
-[v0.2.1dev][]
--------------
+[v0.2.1][]
+----------
 
  - Fixed bug: dot was not expanded after keywords.
 
@@ -47,7 +47,7 @@ for [full history][].
  - Initial release.
 
 
-  [v0.2.1dev]: https://github.com/narfdotpl/selfdot.vim/compare/v0.2.0...master
+  [v0.2.1]: https://github.com/narfdotpl/selfdot.vim/compare/v0.2.0...v0.2.1
   [v0.2]: https://github.com/narfdotpl/selfdot.vim/compare/v0.1.3...v0.2.0
   [v0.1.3]: https://github.com/narfdotpl/selfdot.vim/compare/v0.1.2...v0.1.3
   [v0.1.2]: https://github.com/narfdotpl/selfdot.vim/compare/v0.1.1...v0.1.2
