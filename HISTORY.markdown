@@ -10,6 +10,10 @@ for [full history][].
 [v0.2.2dev][]
 -------------
 
+ - Switched from colorscheme-dependent syntax item names to ones from
+   [default Python syntax file](http://code.google.com/p/vim/source/browse/runtime/syntax/python.vim).
+
+
 
 [v0.2.1][]
 ----------

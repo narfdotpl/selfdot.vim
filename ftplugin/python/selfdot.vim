@@ -32,9 +32,9 @@ if !exists('*s:DotOrSelfdot')
         let y = line('.')
 
         " is cursor at string or comment?
-        let syntax_item_name = synIDattr(synIDtrans(synID(y, x, 0)), 'name')
-        if syntax_item_name == 'String' ||
-         \ syntax_item_name == 'Comment'
+        let syntax_item_name = synIDattr(synID(y, x, 0), 'name')
+        if syntax_item_name == 'pythonString' ||
+         \ syntax_item_name == 'pythonComment'
             return '.'
         endif
 
