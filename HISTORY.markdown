@@ -7,8 +7,8 @@ for [full history][].
   [full history]: https://github.com/narfdotpl/selfdot.vim/commits/master
 
 
-[v0.2.3dev][]
--------------
+[v0.2.3][]
+----------
 
  - Finished transition to colorscheme-independent syntax item names.
 
@@ -62,7 +62,7 @@ for [full history][].
  - Initial release.
 
 
-  [v0.2.3dev]: https://github.com/narfdotpl/selfdot.vim/compare/v0.2.2...master
+  [v0.2.3]: https://github.com/narfdotpl/selfdot.vim/compare/v0.2.2...v0.2.3
   [v0.2.2]: https://github.com/narfdotpl/selfdot.vim/compare/v0.2.1...v0.2.2
   [v0.2.1]: https://github.com/narfdotpl/selfdot.vim/compare/v0.2.0...v0.2.1
   [v0.2]: https://github.com/narfdotpl/selfdot.vim/compare/v0.1.3...v0.2.0
