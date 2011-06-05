@@ -21,9 +21,9 @@ set cpo&vim
 
 " don't define twice
 if !exists('*s:DotOrSelfdot')
-    " list valid `self.` prefixes
-    let s:prefixes = ['(', '[', '{', '=', '>', '<', '+', '-', '*', '/', '%',
-                    \ '&', '|', '^', '~', ',', ';', ':', '@']
+    " list characters that can precede `self.`
+    let s:selfdot_chars = ['(', '[', '{', '=', '>', '<', '+', '-', '*', '/',
+                         \ '%', '&', '|', '^', '~', ',', ';', ':', '@']
 
     " return `.` or `self.` depending on context
     function s:DotOrSelfdot()
@@ -58,12 +58,11 @@ if !exists('*s:DotOrSelfdot')
             return 'self.'
         endif
 
-        " is `p` one of prefixes?
-        for prefix in s:prefixes
-            if p == prefix
-                return 'self.'
-            endif
-        endfor
+        " is `p` one of characters that can precede `self.`?
+        if index(s:selfdot_chars, p) >= 0
+            return 'self.'
+        endif
+
         return '.'
     endfunction
 endif
