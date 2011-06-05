@@ -3,7 +3,7 @@
 "
 " Vim plugin that lets you type `self.` by pressing `.` in Python files.
 "
-" Version:  0.2.2
+" Version:  0.2.3dev
 " Website:  https://github.com/narfdotpl/selfdot.vim
 " License:  public domain <http://unlicense.org/>
 " Author:   Maciej Konieczny <hello@narf.pl>
