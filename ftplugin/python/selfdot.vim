@@ -25,6 +25,9 @@ if !exists('*s:DotOrSelfdot')
     let s:selfdot_chars = ['(', '[', '{', '=', '>', '<', '+', '-', '*', '/',
                          \ '%', '&', '|', '^', '~', ',', ';', ':', '@']
 
+    " list string and comment syntax item names
+    let s:dot_names = ['pythonString', 'pythonRawString', 'pythonComment']
+
     " return `.` or `self.` depending on context
     function s:DotOrSelfdot()
         " get cursor position
@@ -33,8 +36,7 @@ if !exists('*s:DotOrSelfdot')
 
         " is cursor at string or comment?
         let syntax_item_name = synIDattr(synID(y, x, 0), 'name')
-        if syntax_item_name == 'pythonString' ||
-         \ syntax_item_name == 'pythonComment'
+        if index(s:dot_names, syntax_item_name) >= 0
             return '.'
         endif
 

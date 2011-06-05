@@ -10,6 +10,8 @@ for [full history][].
 [v0.2.3dev][]
 -------------
 
+ - Fixed bug regarding raw strings.
+
 
 [v0.2.2][]
 ----------
