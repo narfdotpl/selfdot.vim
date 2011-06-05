@@ -10,6 +10,8 @@ for [full history][].
 [v0.2.3dev][]
 -------------
 
+ - Finished transition to colorscheme-independent syntax item names.
+
  - Fixed bug regarding raw strings.
 
 

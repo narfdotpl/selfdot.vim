@@ -25,6 +25,10 @@ if !exists('*s:DotOrSelfdot')
     let s:selfdot_chars = ['(', '[', '{', '=', '>', '<', '+', '-', '*', '/',
                          \ '%', '&', '|', '^', '~', ',', ';', ':', '@']
 
+    " list syntax names of items that can precede `self.`
+    let s:selfdot_names = ['pythonConditional', 'pythonOperator',
+                         \ 'pythonRepeat', 'pythonStatement']
+
     " list string and comment syntax item names
     let s:dot_names = ['pythonString', 'pythonRawString', 'pythonComment']
 
@@ -55,8 +59,9 @@ if !exists('*s:DotOrSelfdot')
             let p = getline(p_y)[p_x - 1]
         endif
 
-        " is `p` part of statement keyword?
-        if synIDattr(synIDtrans(synID(p_y, p_x, 0)), 'name') == 'Statement'
+        " is `p` part of syntax item that can precede `self.`?
+        let syntax_item_name = synIDattr(synID(p_y, p_x, 0), 'name')
+        if index(s:selfdot_names, syntax_item_name) >= 0
             return 'self.'
         endif
 
