@@ -23,11 +23,11 @@ set cpo&vim
 if !exists('*s:DotOrSelfdot')
     " list characters that can precede `self.`
     let s:selfdot_chars = ['(', '[', '{', '=', '>', '<', '+', '-', '*', '/',
-                         \ '%', '&', '|', '^', '~', ',', ';', ':', '@']
+                         \ '%', '&', '|', '^', '~', ',', ';', ':']
 
     " list syntax names of items that can precede `self.`
-    let s:selfdot_names = ['pythonConditional', 'pythonOperator',
-                         \ 'pythonRepeat', 'pythonStatement']
+    let s:selfdot_names = ['pythonConditional', 'pythonDecorator',
+                         \ 'pythonOperator', 'pythonRepeat', 'pythonStatement']
 
     " list string and comment syntax item names
     let s:dot_names = ['pythonString', 'pythonRawString', 'pythonComment']
