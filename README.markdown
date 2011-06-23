@@ -5,9 +5,14 @@ Vim plugin that lets you type `self.` by pressing `.` in Python files.
 
 Typing `self.` can be annoying, mistyping -- even more.  This plugin
 lets you save keystrokes by expanding `.` into `self.` in places where
-putting a dot is a syntax error (e.g. at the beginning of an indented
-line or right after an operator).  Plugin is disabled in strings and
-comments in order for you to be able to type `cd ..` and stay sane.
+putting a dot is usually a syntax error (e.g. right after `if`).
+selfdot recognizes conditionals, operators, line continuations, etc.  It
+tries not to get in your way and is disabled inside strings and comments
+(so you can type `cd ..` and stay sane).  Code-awareness relies heavily
+on syntax item names defined in [default Python syntax file][syntax], so
+if you're using something else, selfdot might not work.
+
+  [syntax]: http://code.google.com/p/vim/source/browse/runtime/syntax/python.vim
 
 
 Installation
@@ -15,22 +20,15 @@ Installation
 
 ### In a Nutshell
 
-Put `selfdot.vim` in `~/.vim/ftplugin/python` (be sure to have
-`:filetype plugin on`).
+Put `selfdot.vim` in `~/.vim/ftplugin/python` and be sure to have
+`:filetype plugin on`.
 
 
-### Without Fuss
+### With Bare Hands
 
     mkdir -p ~/.vim/ftplugin/python
     cd !$
-    curl -O https://github.com/narfdotpl/selfdot.vim/raw/master/ftplugin/python/selfdot.vim
-
-
-### With [Pathogen][]
-
-    mkdir -p ~/.vim/bundle/selfdot/ftplugin/python
-    cd !$
-    curl -O https://github.com/narfdotpl/selfdot.vim/raw/master/ftplugin/python/selfdot.vim
+    curl -O https://raw.github.com/narfdotpl/selfdot.vim/master/ftplugin/python/selfdot.vim
 
 
 ### With [Pathogen][] and [Git][vimcast]
