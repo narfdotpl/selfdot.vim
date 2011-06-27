@@ -70,6 +70,12 @@ if !exists('*s:DotOrSelfdot')
             return 'self.'
         endif
 
+        " is `p` part of `print` statement?  (in Python 3 it's a built-in)
+        if p == 't' && syntax_item_name == 'pythonBuiltin' &&
+         \ getline(p_y)[p_x - 2] == 'n'
+            return 'self.'
+        endif
+
         return '.'
     endfunction
 endif

@@ -10,6 +10,11 @@ for [full history][].
 [v0.3dev][]
 -----------
 
+ - Added support for `print` statement.  (But you really shouldn't
+   [debug][] with it.)
+
+  [debug]: https://github.com/narfdotpl/debug
+
 
 [v0.2.3][]
 ----------
