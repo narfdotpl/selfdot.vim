@@ -10,6 +10,8 @@ for [full history][].
 [v0.3.1dev][]
 -------------
 
+ - Fixed bug regarding `except` and `raise`.
+
 
 [v0.3][]
 --------

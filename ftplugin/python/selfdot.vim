@@ -27,7 +27,8 @@ if !exists('*s:DotOrSelfdot')
 
     " list syntax names of items that can precede `self.`
     let s:selfdot_names = ['pythonConditional', 'pythonDecorator',
-                         \ 'pythonOperator', 'pythonRepeat', 'pythonStatement']
+                         \ 'pythonException', 'pythonOperator',
+                         \ 'pythonRepeat', 'pythonStatement']
 
     " list string and comment syntax item names
     let s:dot_names = ['pythonString', 'pythonRawString', 'pythonComment']
